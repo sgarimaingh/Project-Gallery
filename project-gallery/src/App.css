@@ -7,18 +7,20 @@
 h1 {
   font-size: 40px; /* Adjust the font size as needed */
   font-weight: bold;
-  color: rgb(234, 149, 13);
+  color: rgb(80, 132, 217);
   margin-bottom: 50px; 
   margin-top: 50px;
   text-align: center;
+  text-decoration: underline;
 }
+
 
 .project-card {
   margin-bottom: 20px;
   padding: 20px;
   border: 1px solid rgb(17, 2, 27);
   border-radius: 5px;
-  background-color: #c5d8e6;
+  background-color: #f4e8be;
   transition: all 0.3s ease;
   color: #000;
   text-decoration: none;

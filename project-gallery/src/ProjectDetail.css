@@ -1,16 +1,64 @@
-.project-detail {
-    background-color: #0d0a0a;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+.project-details {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40%;
+    height: auto;
+    background-color: rgb(224, 242, 217);
     padding: 20px;
-    margin-top: 20px;
-    width: 40%; /* Adjust the width as needed */
-    float: right;
-    margin-left: 20px; /* Add some space between the main content and the project detail */
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  
+    /* Display the element as a flexbox container */
+    display: flex;
+    flex-direction: column;
+  
+    /* Align the items in the flexbox container horizontally */
+    align-items: left;
+    animation: slide-in 0.75s ease-in-out;
+}
+h2 {
+    color:rgb(23, 19, 141);
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+  
+  .key {
+    font-size: 16px;
+    color: rgb(2, 2, 17);
+    font-weight: bold;
+    margin-bottom: 10px;
+  
+    /* Display the key as a flexbox item */
+    display: flex;
+    flex-direction: row;
+  
+    /* Align the key text horizontally */
+    align-items: center;
   }
   
-  .main-content {
-    width: 50%; /* Adjust the width as needed */
-    float: left;
+  .value {
+    font-size: 14px;
+    color: black;
+  
+    /* Display the value as a flexbox item */
+    display: flex;
+    flex-direction: row;
+  
+    /* Align the value text horizontally */
+    align-items: center;
+  }
+  
+  /* Add a border to the top and bottom of each key-value pair */
+  .key + .value {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
   }
   

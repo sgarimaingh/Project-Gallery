@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import ProjectDetail from './ProjectDetail';
 import './App.css';
+import ProjectDetail from './ProjectDetail';
 
 
 function App() {
