@@ -20,8 +20,8 @@ Follow these steps:
 
 ## Features
 
-1. The first page displays the complete list of projects present in the database.
+1. The initial page presents a comprehensive compilation of all projects currently contained within the database.
 
-2. Search bar at the top of the page which allows the user to search on the basis of technical skillsets i.e. (frontend, backend, databases, infrastructure).
+2. A search bar positioned at the top of the page permits users to conduct searches based on technical skillsets, such as frontend, backend, databases, and infrastructure.
 
-3. User can click on any specific project and the project detail gets displayed on the right side.
+3. Users have the capability to select any particular project, prompting the display of its corresponding details on the right-hand side of the screen.

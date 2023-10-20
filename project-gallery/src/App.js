@@ -13,7 +13,6 @@ function App() {
     if (searchTerm) {
       const response = await fetch(`http://localhost:5000/projects?query=${searchTerm}`);
       const data = await response.json();
-      console.log(data)
       setFilteredProjects(data);
     } else {
       setFilteredProjects(projects);

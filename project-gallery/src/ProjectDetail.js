@@ -17,7 +17,6 @@ const ProjectDetail = () => {
   
     return (
       <div>
-        {console.log(project.title)}
         <div className="project-details">
             <h2>{project.title}</h2><hr/>&nbsp;
               <p class="key"> Title  </p>
