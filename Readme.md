@@ -12,7 +12,7 @@ Follow these steps:
 
 1. Move to the project Directory by using:
 ```
-        cd Project Gallery
+        cd Project-Gallery
 ```
 
 2. Run the following commands
