@@ -7,11 +7,11 @@
 h1 {
   font-size: 40px; 
   font-weight: bold;
-  color: rgb(80, 132, 217);
+  color: rgb(12, 150, 129);
   margin-bottom: 50px; 
   margin-top: 50px;
-  text-align: center;
-  text-decoration: underline;
+  text-align: left;
+  font-family:'Lucida Sans', Verdana;
 }
 
 
@@ -20,7 +20,7 @@ h1 {
   padding: 20px;
   border: 1px solid rgb(17, 2, 27);
   border-radius: 5px;
-  background-color: #f4e8be;
+  background-color: #bedaed;
   transition: all 0.3s ease;
   color: #000;
   text-decoration: none;
@@ -32,4 +32,18 @@ h1 {
 .project-card:hover {
   transform: scale(1.05);
   box-shadow: 2px 2px 5px #aaa;
+}
+
+.search-bar {
+  width: 30%;
+  margin-bottom: 20px;
+  
+}
+
+.search-button {
+  width: 6%;
+  margin-left: 5px;
+  color:rgb(5, 9, 9);
+  background-color: rgb(157, 203, 218);
+  flex-wrap: wrap;
 }

@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 import sqlite3
 import pandas as pd
@@ -50,8 +50,22 @@ def get_projects():
     cur = conn.cursor()
     cur.execute('SELECT * FROM projects')
     rows = cur.fetchall()
-    conn.close()
-    return jsonify([dict(row) for row in rows])
+    query = request.args.get('query')
+    projects = [dict(row) for row in rows]
+    print(len(projects))
+
+    if query:
+            filtered_projects = [project for project in projects if 
+                    (project.get('backend') and query.lower() in project['backend'].lower()) or
+                    (project.get('frontend') and query.lower() in project['frontend'].lower()) or
+                    (project.get('databases') and query.lower() in project['databases'].lower()) or
+                    (project.get('infrastructure') and query.lower() in project['infrastructure'].lower())]
+
+            print(len(filtered_projects))
+            return jsonify(filtered_projects)
+    else:
+            return jsonify(projects)
+    
 
 # API to retrieve a project by ID
 @app.route('/projects/<int:project_id>', methods=['GET'])

@@ -6,6 +6,19 @@ import ProjectDetail from './ProjectDetail';
 
 function App() {
   const [projects, setProjects] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filteredProjects, setFilteredProjects] = useState([]);
+
+  const handleSearch = async () => {
+    if (searchTerm) {
+      const response = await fetch(`http://localhost:5000/projects?query=${searchTerm}`);
+      const data = await response.json();
+      console.log(data)
+      setFilteredProjects(data);
+    } else {
+      setFilteredProjects(projects);
+    }
+  };
 
   useEffect(() => {
     fetchProjects();
@@ -15,14 +28,23 @@ function App() {
     const response = await fetch('http://localhost:5000/projects');
     const data = await response.json();
     setProjects(data);
+    setFilteredProjects(data);
   };
 
   return (
     <Router>
       <div className="App">
         <h1>Project Gallery</h1>
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          placeholder="Search projects by technical skill sets.."
+          className='search-bar'
+        />
+        <button onClick={handleSearch} className='search-button'>Search</button>
         <div className="gallery">
-          {projects.map((project) => (
+          {filteredProjects.map((project) => (
             <Link
               key={project.id}
               to={`/project/${project.id}`}
